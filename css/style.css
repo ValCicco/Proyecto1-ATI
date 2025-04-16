@@ -97,7 +97,10 @@ button:hover{
     margin-bottom: 0px;
     margin-top: 0px;
 }
-
+.dummies:hover{
+    background-color: #99c5dd;
+    transform: scale(1.06) rotate(5deg);
+}
 /*perfil.html*/
 .perfil {
     text-align: left;
