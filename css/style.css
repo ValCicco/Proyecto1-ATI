@@ -1,4 +1,4 @@
-body {
+.index {
     font-family: Arial, Helvetica, sans-serif;
     width: 900px;
     margin: 0 auto;
@@ -53,14 +53,20 @@ footer{
     font-size: 15px;
     justify-content: center;
 }
-.buscar {
-    justify-content: right;
-    
+.buscar form{
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 5px;
+    margin-left: 30px;
 }
 input{
     border: none;
     font-size: 15px;
     height: 22px;
+}
+input:hover, input:focus{
+    outline: none;
+    background-color: #e6f0ff;
 }
 button{
     border: none;
@@ -70,12 +76,14 @@ button{
     height: 22px;
 }
 button:hover{
+    outline: none;
     background-color: white;
 }
 .menu-dummies{
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(3, 1fr);
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
     list-style-type: none;
     gap: 20px;
     padding: 0;
@@ -89,6 +97,10 @@ button:hover{
     padding: 16px;
     height: 160px;
     width: 160px;
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; 
 }
 .dummies img{
     margin-bottom: 0px;
@@ -98,46 +110,60 @@ button:hover{
     margin-bottom: 0px;
     margin-top: 0px;
 }
+.dummies a{
+    text-decoration: none;
+    color: #8BB2F3;
+}
 .dummies:hover{
     background-color: #99c5dd;
     transform: scale(1.06) rotate(5deg);
 }
+.dummies a:visited{
+    background-color: #f5f5f581; /*por ahora mientras background no este funcionando*/
+    text-decoration: none;
+    color: #3c80f5;
+}
 
 /*perfil.html*/
 .perfil {
-    text-align: left;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    flex-wrap: nowrap;
     margin: 4px;
     padding: 0;
+    gap: 2px;
 }
 .descripcion-info{
-    margin: 0px;  
+    margin: 0;  
     padding: 8px;
     text-align: justify;
     font-family: 'Courier New', Courier, monospace;
     font-style: italic;
+    font-size: 1rem;
 }
 .contacto p{
     margin: 0px;  
     padding: 8px;
     text-align: justify;
+    font-size: 1rem;
 }
 .imagen-perfil {
-    margin-right: 20px;
+    object-fit: cover;
     border-top-left-radius: 30%;
     height: 355px;
     width: 200px;
-    float: left;
 }
 .info-perfil {
     padding: 5px;
-    margin-left: 202px;
     box-shadow: 5px 5px 0px rgba(105, 105, 105, 0.8);
     border: 2px solid black; 
     width: 700px; 
     height: 341px; 
 }
 .info-perfil h1 {
-color: orange; 
+    color: orange; 
+    font-size: 2rem;
 }
 td {
     padding-right: 30px; 
@@ -148,4 +174,171 @@ td {
 }
 .contacto a:visited {
     color:red;
+}
+
+/*media queries*/
+/*Dispositivos móviles*/
+@media (min-width: 320px) and (max-width: 480px){
+    .perfil{
+        font-size: 16px; 
+        height: 100%;
+    }
+    .imagen-perfil {
+        content: url('CEDULAPequena.jpeg');
+        width: 100px; /* más pequeño */
+        height: 100%;  
+        max-width: 30vw;  
+    }
+    .info-perfil {
+        width: 70vw; 
+        height: 100%;
+        padding: 1px;
+    }
+    .descripcion-info, .contacto p, td {
+        padding: 2px;
+        font-size: 6px; 
+    }
+    .info-perfil h1 {
+        font-size: 12px; 
+    }
+    .img7{
+        content: url('29640095/CEDULAPequena.jpeg');
+    }
+    .img1{
+        content: url('dummies/dummy1/dummyPequena.jpg');
+    }
+    .img2{
+        content: url('dummies/dummy2/dummyPequena.jpg');
+    }
+    .img3{
+        content: url('dummies/dummy3/dummyPequena.jpg');
+    }
+    .img4{
+        content: url('dummies/dummy4/dummyPequena.jpg');
+    }
+    .img5{
+        content: url('dummies/dummy5/dummyPequena.jpg');
+    }
+    .img6{
+        content: url('dummies/dummy6/dummyPequena.jpg');
+    }
+}
+/*iPads, tablets*/
+@media (min-width: 481px) and (max-width: 768px){
+    .perfil{
+        font-size: 16px; 
+        height: 100%;
+    }
+    .imagen-perfil {
+        content: url('CEDULAPequena.jpeg');
+        width: 120px; /* más pequeño */
+        height: 100%;  
+        max-width: 30vw;  
+    }
+    .info-perfil {
+        width: 70vw; 
+        height: 100%;
+        padding: 1px;
+    }
+    .descripcion-info, .contacto p, td {
+        padding: 2px;
+        font-size: 9px; 
+    }
+    .info-perfil h1 {
+        font-size: 15px; 
+    }
+    .img7{
+        content: url('29640095/CEDULAPequena.jpeg');
+    }
+    .img1{
+        content: url('dummies/dummy1/dummyPequena.jpg');
+    }
+    .img2{
+        content: url('dummies/dummy2/dummyPequena.jpg');
+    }
+    .img3{
+        content: url('dummies/dummy3/dummyPequena.jpg');
+    }
+    .img4{
+        content: url('dummies/dummy4/dummyPequena.jpg');
+    }
+    .img5{
+        content: url('dummies/dummy5/dummyPequena.jpg');
+    }
+    .img6{
+        content: url('dummies/dummy6/dummyPequena.jpg');
+    }
+}
+/*pantallas pequeñas, ordenadores portátiles*/
+@media (min-width: 769px) and (max-width: 1024px){
+    .imagen-perfil {
+        content: url('CEDULAGrande.JPEG');
+        width: 200px; 
+        height: 100%;  
+        max-width: 30vw; 
+    }
+    .perfil{
+        font-size: 16px; 
+        height: 100%;
+    }
+    .info-perfil {
+        width: 70vw; 
+        height: 100%;
+        padding: 1px;
+    }
+    .descripcion-info, .contacto p, td {
+        padding: 2px;
+        font-size: 16px; 
+    }
+    .info-perfil h1 {
+        font-size: 26px; 
+    }
+    .img7{
+        content: url('29640095/CEDULAGrande.JPEG');
+    }
+    .img1{
+        content: url('dummies/dummy1/dummyGrande.jpg');
+    }
+    .img2{
+        content: url('dummies/dummy2/dummyGrande.jpg');
+    }
+    .img3{
+        content: url('dummies/dummy3/dummyGrande.jpg');
+    }
+    .img4{
+        content: url('dummies/dummy4/dummyGrande.jpg');
+    }
+    .img5{
+        content: url('dummies/dummy5/dummyGrande.jpg');
+    }
+    .img6{
+        content: url('dummies/dummy6/dummyGrande.jpg');
+    }
+}
+/*pantallas grandes, ordenadores de escritorio*/
+@media (min-width: 1025px) and (max-width: 1200px){
+    .imagen-perfil {
+        content: url('CEDULAGrande.JPEG');
+    }
+    .img7{
+        content: url('29640095/CEDULAGrande.JPEG');
+    }
+    .img1{
+        content: url('dummies/dummy1/dummyGrande.jpg');
+    }
+    .img2{
+        content: url('dummies/dummy2/dummyGrande.jpg');
+    }
+    .img3{
+        content: url('dummies/dummy3/dummyGrande.jpg');
+    }
+    .img4{
+        content: url('dummies/dummy4/dummyGrande.jpg');
+    }
+    .img5{
+        content: url('dummies/dummy5/dummyGrande.jpg');
+    }
+    .img6{
+        content: url('dummies/dummy6/dummyGrande.jpg');
+    }
 }
