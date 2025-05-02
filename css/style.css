@@ -110,18 +110,16 @@ button:hover{
     margin-bottom: 0px;
     margin-top: 0px;
 }
-.dummies a{
+.menu-dummies a{
     text-decoration: none;
-    color: #8BB2F3;
 }
 .dummies:hover{
     background-color: #99c5dd;
     transform: scale(1.06) rotate(5deg);
 }
-.dummies a:visited{
-    background-color: #f5f5f581; /*por ahora mientras background no este funcionando*/
+.menu-dummies a:visited .dummies {
+    background-color: #deebf2;
     text-decoration: none;
-    color: #3c80f5;
 }
 
 /*perfil.html*/
@@ -178,7 +176,7 @@ td {
 
 /*media queries*/
 /*Dispositivos móviles*/
-@media (min-width: 320px) and (max-width: 480px){
+@media (max-width: 480px){
     .perfil{
         font-size: 16px; 
         height: 100%;
@@ -201,6 +199,31 @@ td {
     .info-perfil h1 {
         font-size: 12px; 
     }
+
+    .index {
+        width: 95%;
+    }
+
+    header {
+        width: 100%;
+    }
+
+    .dummies {
+        width: 36%;
+        font-size: 0.8rem;
+    }
+
+    .menu h1 {
+        font-size:1rem
+    }
+
+    .menu h1 span,
+    .menu .saludo, .menu .buscar input,
+    footer {
+        font-size: 0.7rem;
+    }
+    
+
     .img7{
         content: url('29640095/CEDULAPequena.jpeg');
     }
@@ -225,6 +248,29 @@ td {
 }
 /*iPads, tablets*/
 @media (min-width: 481px) and (max-width: 768px){
+    .index {
+        width: 95%;
+    }
+
+    header{
+        width: 100%;
+    }
+
+    .dummies {
+        width: 23%;
+        font-size: 0.8rem;
+    }
+
+    .menu h1 {
+        font-size:1rem
+    }
+
+    .menu h1 span,
+    .menu .saludo, .menu .buscar input,
+    footer {
+        font-size: 0.7rem;
+    }
+
     .perfil{
         font-size: 16px; 
         height: 100%;
