@@ -121,7 +121,11 @@ button:hover{
     background-color: #deebf2;
     text-decoration: none;
 }
-
+.no-results-mensaje {
+    display: none;
+    text-align: center;
+    color: #8BB2F3;
+}
 /*perfil.html*/
 .perfil {
     display: flex;

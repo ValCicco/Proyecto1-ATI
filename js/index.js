@@ -2,61 +2,51 @@ document.addEventListener("DOMContentLoaded", () => {
     const contenedor = document.querySelector(".menu-dummies");
     const urlParams = new URLSearchParams(window.location.search);
     const idioma = urlParams.get("lang") || "es";
-
     const mensajeNoResultados = document.getElementById('no-results-message');
 
-    const mostrarPerfiles = (perfiles) => {
-        contenedor.innerHTML = ""; 
-        if (perfiles.length === 0 && mensajeNoResultados) {
-            mensajeNoResultados.style.display = "block";
-            return;
-        } else if (mensajeNoResultados) {
-            mensajeNoResultados.style.display = "none";
-        }
+    let perfiles = []; 
 
-        perfiles.forEach(perfil => {
-            const link = document.createElement("a");
-            link.href = `perfil.html?ci=${perfil.ci}&lang=es`;
-
+    const mostrarPerfiles = (perfilesMostrar) => {
+        contenedor.innerHTML = "";
+        perfilesMostrar.forEach(perfil => {
             const li = document.createElement("li");
             li.className = "dummies";
+
+            const link = document.createElement("a");
+            link.href = `perfil.html?ci=${perfil.ci}&lang=${idioma}`;
 
             const img = document.createElement("img");
             img.src = perfil.imagen;
             img.alt = perfil.nombre;
-            img.className = perfil.claseImg || "";
 
             const h4 = document.createElement("h4");
             h4.textContent = perfil.nombre;
 
-            li.appendChild(img);
-            li.appendChild(h4);
-            link.appendChild(li);
-            contenedor.appendChild(link);
+            link.appendChild(img);
+            link.appendChild(h4);
+            li.appendChild(link);
+            contenedor.appendChild(li);
         });
     };
 
     fetch("datos/index.json")
         .then(response => {
-            if (!response.ok) {
-                throw new Error('Error al cargar datos/index.json');
-            }
+            if (!response.ok) throw new Error("No se pudo cargar el archivo de perfiles.");
             return response.json();
         })
-        .then(perfiles => {
-            mostrarPerfiles(perfiles);
+        .then(data => {
+            perfiles = data;
+            mostrarPerfiles(perfiles); 
         })
         .catch(error => {
-            console.error("Error al cargar perfiles:", error);
-            if (mensajeNoResultados) {
-                mensajeNoResultados.style.display = "block";
-                mensajeNoResultados.textContent = "No se pudieron cargar los perfiles.";
-            }
+            console.error("Error cargando los perfiles:", error);
+            mensajeNoResultados.textContent = "No se pudieron cargar los perfiles.";
+            mensajeNoResultados.style.display = 'block';
         });
 
     fetch(`conf/config${idioma.toUpperCase()}.json`)
         .then(response => {
-            if (!response.ok) throw new Error('Error en la carga del archivo JSON');
+            if (!response.ok) throw new Error("No se pudo cargar el archivo de idioma.");
             return response.json();
         })
         .then(config => {
@@ -86,9 +76,33 @@ document.addEventListener("DOMContentLoaded", () => {
                     }
                 }
             });
+
+            const form = document.querySelector('form');
+            const inputBuscar = document.querySelector('input[name="query"]');
+
+            form.addEventListener('submit', (e) => {
+                e.preventDefault();
+                const query = inputBuscar.value.trim().toLowerCase();
+                buscarEstudiantes(query, config);
+            });
+
+            const buscarEstudiantes = (query, config) => {
+                const perfilesFiltrados = perfiles.filter(perfil =>
+                    perfil.nombre.toLowerCase().includes(query)
+                );
+
+                if (perfilesFiltrados.length === 0) {
+                    mensajeNoResultados.textContent = config.no_results.replace('[query]', query);
+                    mensajeNoResultados.style.display = 'block';
+                } else {
+                    mensajeNoResultados.style.display = 'none';
+                }
+
+                mostrarPerfiles(perfilesFiltrados);
+            };
         })
         .catch(error => {
-            console.error('Error cargando el archivo de idioma:', error);
+            console.error("Error cargando el archivo de idioma:", error);
             alert("No se pudo cargar el archivo de idioma.");
         });
 });
