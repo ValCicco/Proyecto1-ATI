@@ -217,33 +217,12 @@ td {
         font-size:1rem
     }
 
-    .menu h1 span,
-    .menu .saludo, .menu .buscar input,
-    footer {
+    .menu h1 span, .menu .saludo, .menu .buscar input,footer {
         font-size: 0.7rem;
     }
-    
 
     .img7{
         content: url('29640095/CEDULAPequena.jpeg');
-    }
-    .img1{
-        content: url('dummies/dummy1/dummyPequena.jpg');
-    }
-    .img2{
-        content: url('dummies/dummy2/dummyPequena.jpg');
-    }
-    .img3{
-        content: url('dummies/dummy3/dummyPequena.jpg');
-    }
-    .img4{
-        content: url('dummies/dummy4/dummyPequena.jpg');
-    }
-    .img5{
-        content: url('dummies/dummy5/dummyPequena.jpg');
-    }
-    .img6{
-        content: url('dummies/dummy6/dummyPequena.jpg');
     }
 }
 /*iPads, tablets*/
@@ -296,24 +275,6 @@ td {
     .img7{
         content: url('29640095/CEDULAPequena.jpeg');
     }
-    .img1{
-        content: url('dummies/dummy1/dummyPequena.jpg');
-    }
-    .img2{
-        content: url('dummies/dummy2/dummyPequena.jpg');
-    }
-    .img3{
-        content: url('dummies/dummy3/dummyPequena.jpg');
-    }
-    .img4{
-        content: url('dummies/dummy4/dummyPequena.jpg');
-    }
-    .img5{
-        content: url('dummies/dummy5/dummyPequena.jpg');
-    }
-    .img6{
-        content: url('dummies/dummy6/dummyPequena.jpg');
-    }
 }
 /*pantallas pequeñas, ordenadores portátiles*/
 @media (min-width: 769px) and (max-width: 1024px){
@@ -342,49 +303,10 @@ td {
     .img7{
         content: url('29640095/CEDULAGrande.JPEG');
     }
-    .img1{
-        content: url('dummies/dummy1/dummyGrande.jpg');
-    }
-    .img2{
-        content: url('dummies/dummy2/dummyGrande.jpg');
-    }
-    .img3{
-        content: url('dummies/dummy3/dummyGrande.jpg');
-    }
-    .img4{
-        content: url('dummies/dummy4/dummyGrande.jpg');
-    }
-    .img5{
-        content: url('dummies/dummy5/dummyGrande.jpg');
-    }
-    .img6{
-        content: url('dummies/dummy6/dummyGrande.jpg');
-    }
 }
 /*pantallas grandes, ordenadores de escritorio*/
 @media (min-width: 1025px) and (max-width: 1200px){
     .imagen-perfil {
         content: url('CEDULAGrande.JPEG');
-    }
-    .img7{
-        content: url('29640095/CEDULAGrande.JPEG');
-    }
-    .img1{
-        content: url('dummies/dummy1/dummyGrande.jpg');
-    }
-    .img2{
-        content: url('dummies/dummy2/dummyGrande.jpg');
-    }
-    .img3{
-        content: url('dummies/dummy3/dummyGrande.jpg');
-    }
-    .img4{
-        content: url('dummies/dummy4/dummyGrande.jpg');
-    }
-    .img5{
-        content: url('dummies/dummy5/dummyGrande.jpg');
-    }
-    .img6{
-        content: url('dummies/dummy6/dummyGrande.jpg');
     }
 }

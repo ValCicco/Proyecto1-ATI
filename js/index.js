@@ -5,10 +5,10 @@ document.addEventListener("DOMContentLoaded", () => {
         contenedor.innerHTML = ""; 
         perfiles.forEach(perfil => {
             const li = document.createElement("li");
-            li.className = "dummies";
-
+        
             const link = document.createElement("a");
             link.href = `perfil.html?ci=${perfil.ci}&lang=es`;
+            link.className = "dummies";
 
             const img = document.createElement("img");
             img.src = perfil.imagen;
