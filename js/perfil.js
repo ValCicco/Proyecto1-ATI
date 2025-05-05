@@ -3,7 +3,7 @@ const cedula = urlParams.get('ci');
 const idioma = urlParams.get('lang') || 'es'; 
 
 if (cedula) {
-    const perfilUrl = `/${cedula}/perfil.json`;
+    const perfilUrl = `${cedula}/perfil.json`;
 
     fetch(perfilUrl)
         .then(response => response.json())

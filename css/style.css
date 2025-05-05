@@ -186,7 +186,7 @@ td {
         height: 100%;
     }
     .imagen-perfil {
-        content: url('CEDULAPequena.jpeg');
+        content: url('../29640095/CEDULAPequena.jpeg');
         width: 100px; /* más pequeño */
         height: 100%;  
         max-width: 30vw;  
@@ -226,7 +226,7 @@ td {
     }
 
     .img7{
-        content: url('29640095/CEDULAPequena.jpeg');
+        content: url('../29640095/CEDULAPequena.jpeg');
     }
 }
 /*iPads, tablets*/
@@ -259,7 +259,7 @@ td {
         height: 100%;
     }
     .imagen-perfil {
-        content: url('CEDULAPequena.jpeg');
+        content: url('../29640095/CEDULAPequena.jpeg');
         width: 120px; /* más pequeño */
         height: 100%;  
         max-width: 30vw;  
@@ -277,13 +277,13 @@ td {
         font-size: 15px; 
     }
     .img7{
-        content: url('29640095/CEDULAPequena.jpeg');
+        content: url('../29640095/CEDULAPequena.jpeg');
     }
 }
 /*pantallas pequeñas, ordenadores portátiles*/
 @media (min-width: 769px) and (max-width: 1024px){
     .imagen-perfil {
-        content: url('CEDULAGrande.JPEG');
+        content: url('../29640095/CEDULAGrande.JPEG');
         width: 200px; 
         height: 100%;  
         max-width: 30vw; 
@@ -305,12 +305,12 @@ td {
         font-size: 26px; 
     }
     .img7{
-        content: url('29640095/CEDULAGrande.JPEG');
+        content: url('../29640095/CEDULAGrande.JPEG');
     }
 }
 /*pantallas grandes, ordenadores de escritorio*/
 @media (min-width: 1025px) and (max-width: 1200px){
     .imagen-perfil {
-        content: url('CEDULAGrande.JPEG');
+        content: url('../29640095/CEDULAGrande.JPEG');
     }
 }
