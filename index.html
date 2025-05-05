@@ -4,31 +4,35 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="http://www.ciens.ucv.ve/portalasig2/favicon.ico">
-    <title>ATI[UCV] 2024-1</title>
+    <title ></title>
+    <link rel="stylesheet" href="css/style.css">
     <script src="conf/configES.json"></script>
     <script src="js/index.js" defer></script>
-    <link rel="stylesheet" href="css/style.css">
+    <script src="datos/index.json"></script>
+
 </head>
 <body class="index">
     <header>
         <nav>
             <ul class="menu">
-                <li><h1>ATI<span>[UCV]</span> 2024-1</h1></li>
-                <li class="saludo">Hola, Valeria Ciccolella</li>
+                <li><h1 data-i18n="sitio">ATI<span>[UCV]</span> 2024-1</h1></li>
+                <li class="saludo" data-i18n="saludo">Hola, <span id="nombre-usuario">Valeria Ciccolella</span></li>
                 <li class="buscar">
                     <form action="" method="get">
-                        <input type="text" name="query" placeholder="Nombre...">
-                        <button type="submit">Buscar</button>
+                        <input type="text" name="query" placeholder="Nombre..." data-i18n-placeholder="nombre">
+                        <button type="submit" data-i18n="buscar">Buscar</button>
                     </form>
                 </li>
             </ul>
         </nav>
     </header>
     <section>
-        <ul class="menu-dummies"></ul>
+        <ul class="menu-dummies">  
+        </ul>
+        <p id="no-results-message" class="no-results-mensaje"></p> 
     </section>
     <footer>
-        <p>Copyright © 2024 Escuela de computación -
+        <p data-i18n="copyRight">Copyright © 2024 Escuela de computación -
             ATI. Todos los derechos reservados</p>
     </footer>
 </body>
