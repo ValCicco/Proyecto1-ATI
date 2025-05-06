@@ -1,0 +1,16 @@
+const perfil = {
+	"nombre": "Valeria Ciccolella",
+    "descripcion": "Soy estudiante de 6to semestre de la carrera Licenciatura en Computación en la Universidad Central de Venezuela. 
+                Actualmente, me desempeño como preparadora en el Departamento de Matemática, un rol que disfruto porque me encantan las matemáticas. 
+                Además, soy amante de la lectura, y siempre estoy buscando aprender algo nuevo que me inspire a crecer tanto a nivel académico como personal.",
+	"color": "Morado",
+	"libro": "Harry Potter: El Caliz de Fuego",
+	"musica": "Pop",
+	"video_juego": "Sudoku",
+	"lenguajes": ["C++", "C", "Java", "Python"],
+	"email": "valerria02@gmail.com",
+	"ci": "29640095",
+	"genero": "femenino",
+	"fecha_nacimiento": "07/10/2002",
+	"imagen": "CEDULAGrande.JPEG"
+}
