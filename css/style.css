@@ -182,8 +182,8 @@ td {
         height: 100%;
     }
     .imagen-perfil {
-        content: url('CEDULAPequena.jpeg');
-        width: 100px; /* más pequeño */
+        content: url('../29640095/CEDULAPequena.jpeg');
+        width: 100px; 
         height: 100%;  
         max-width: 30vw;  
     }
@@ -225,25 +225,7 @@ td {
     
 
     .img7{
-        content: url('29640095/CEDULAPequena.jpeg');
-    }
-    .img1{
-        content: url('dummies/dummy1/dummyPequena.jpg');
-    }
-    .img2{
-        content: url('dummies/dummy2/dummyPequena.jpg');
-    }
-    .img3{
-        content: url('dummies/dummy3/dummyPequena.jpg');
-    }
-    .img4{
-        content: url('dummies/dummy4/dummyPequena.jpg');
-    }
-    .img5{
-        content: url('dummies/dummy5/dummyPequena.jpg');
-    }
-    .img6{
-        content: url('dummies/dummy6/dummyPequena.jpg');
+        content: url('../29640095/CEDULAPequena.jpeg');
     }
 }
 /*iPads, tablets*/
@@ -276,8 +258,8 @@ td {
         height: 100%;
     }
     .imagen-perfil {
-        content: url('CEDULAPequena.jpeg');
-        width: 120px; /* más pequeño */
+        content: url('../29640095/CEDULAPequena.jpeg');
+        width: 120px; 
         height: 100%;  
         max-width: 30vw;  
     }
@@ -294,31 +276,13 @@ td {
         font-size: 15px; 
     }
     .img7{
-        content: url('29640095/CEDULAPequena.jpeg');
-    }
-    .img1{
-        content: url('dummies/dummy1/dummyPequena.jpg');
-    }
-    .img2{
-        content: url('dummies/dummy2/dummyPequena.jpg');
-    }
-    .img3{
-        content: url('dummies/dummy3/dummyPequena.jpg');
-    }
-    .img4{
-        content: url('dummies/dummy4/dummyPequena.jpg');
-    }
-    .img5{
-        content: url('dummies/dummy5/dummyPequena.jpg');
-    }
-    .img6{
-        content: url('dummies/dummy6/dummyPequena.jpg');
+        content: url('../29640095/CEDULAPequena.jpeg');
     }
 }
 /*pantallas pequeñas, ordenadores portátiles*/
 @media (min-width: 769px) and (max-width: 1024px){
     .imagen-perfil {
-        content: url('CEDULAGrande.JPEG');
+        content: url('../29640095/CEDULAGrande.JPEG');
         width: 200px; 
         height: 100%;  
         max-width: 30vw; 
@@ -340,51 +304,12 @@ td {
         font-size: 26px; 
     }
     .img7{
-        content: url('29640095/CEDULAGrande.JPEG');
-    }
-    .img1{
-        content: url('dummies/dummy1/dummyGrande.jpg');
-    }
-    .img2{
-        content: url('dummies/dummy2/dummyGrande.jpg');
-    }
-    .img3{
-        content: url('dummies/dummy3/dummyGrande.jpg');
-    }
-    .img4{
-        content: url('dummies/dummy4/dummyGrande.jpg');
-    }
-    .img5{
-        content: url('dummies/dummy5/dummyGrande.jpg');
-    }
-    .img6{
-        content: url('dummies/dummy6/dummyGrande.jpg');
+        content: url('../29640095/CEDULAGrande.JPEG');
     }
 }
 /*pantallas grandes, ordenadores de escritorio*/
 @media (min-width: 1025px) and (max-width: 1200px){
     .imagen-perfil {
-        content: url('CEDULAGrande.JPEG');
-    }
-    .img7{
-        content: url('29640095/CEDULAGrande.JPEG');
-    }
-    .img1{
-        content: url('dummies/dummy1/dummyGrande.jpg');
-    }
-    .img2{
-        content: url('dummies/dummy2/dummyGrande.jpg');
-    }
-    .img3{
-        content: url('dummies/dummy3/dummyGrande.jpg');
-    }
-    .img4{
-        content: url('dummies/dummy4/dummyGrande.jpg');
-    }
-    .img5{
-        content: url('dummies/dummy5/dummyGrande.jpg');
-    }
-    .img6{
-        content: url('dummies/dummy6/dummyGrande.jpg');
+        content: url('../29640095/CEDULAGrande.JPEG');
     }
 }
