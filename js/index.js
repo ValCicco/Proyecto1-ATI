@@ -1,25 +1,52 @@
 window.onload = function() {
-    const listado = document.querySelector('.menu-dummies');  
+    const listado = document.querySelector('.menu-dummies');
+    const buscarInput = document.getElementById('buscar-input');
+    const buscarBoton = document.getElementById('buscar-boton');
+    const noResultsMessage = document.getElementById('no-results-message'); 
 
-    perfiles.forEach((perfil) => {
-        const li = document.createElement('li');
-        li.classList.add('dummies');
+    function mostrarPerfiles(perfiles) {
+        listado.innerHTML = ''; 
+        perfiles.forEach((perfil) => {
+            const li = document.createElement('li');
+            li.classList.add('dummies');
 
-        const link = document.createElement("a");
-        link.href = `perfil.html?ci=${perfil.ci}&lang=es`;
+            const link = document.createElement("a");
+            link.href = `perfil.html?ci=${perfil.ci}&lang=es`;
 
-        const img = document.createElement('img');
-        img.setAttribute('srcset', `${perfil.ci}/CEDULAPequena.jpeg 200w, ${perfil.imagen} 720w`);
-        img.setAttribute('sizes', '(min-width: 769px) 720px, (max-width: 769px) 200px');
-        img.setAttribute('alt', `Imagen de ${perfil.nombre}`);
+            const img = document.createElement('img');
+            img.setAttribute('srcset', `${perfil.ci}/CEDULAPequena.jpeg 200w, ${perfil.imagen} 720w`);
+            img.setAttribute('sizes', '(min-width: 769px) 720px, (max-width: 769px) 200px');
+            img.setAttribute('alt', `Imagen de ${perfil.nombre}`);
 
-        const h4 = document.createElement('h4');
-        h4.textContent = perfil.nombre; 
+            const h4 = document.createElement('h4');
+            h4.textContent = perfil.nombre;
 
-        link.appendChild(img);
-        link.appendChild(h4);
-        li.appendChild(link);
-        listado.appendChild(li);
+            link.appendChild(img);
+            link.appendChild(h4);
+            li.appendChild(link);
+            listado.appendChild(li);
+
+            li.addEventListener('click', function() {
+                li.classList.toggle('visited'); // Cambiar el color al hacer clic en el contenedor 'li'
+            });
+        });
+    }
+
+    mostrarPerfiles(perfiles);
+
+    buscarBoton.addEventListener('click', function(event) {
+        event.preventDefault(); 
+        const query = buscarInput.value.toLowerCase(); 
+        const resultados = perfiles.filter(perfil => perfil.nombre.toLowerCase().includes(query));
+
+        if (resultados.length > 0) {
+            mostrarPerfiles(resultados); 
+            noResultsMessage.textContent = ''; 
+        } else {
+            mostrarPerfiles([]); 
+            noResultsMessage.textContent = config.no_results.replace('[query]', query);
+            noResultsMessage.style.display = 'block'; 
+        }
     });
 };
 
