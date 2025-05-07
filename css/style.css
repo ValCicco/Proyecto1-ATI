@@ -110,14 +110,14 @@ button:hover{
     margin-bottom: 0px;
     margin-top: 0px;
 }
-.menu-dummies a{
+.dummies a{
     text-decoration: none;
 }
 .dummies:hover{
     background-color: #99c5dd;
     transform: scale(1.06) rotate(5deg);
 }
-.menu-dummies a:visited .dummies {
+.dummies li a:visited  {
     background-color: #deebf2;
     text-decoration: none;
 }
@@ -224,9 +224,6 @@ td {
     }
     
 
-    .img7{
-        content: url('../29640095/CEDULAPequena.jpeg');
-    }
 }
 /*iPads, tablets*/
 @media (min-width: 481px) and (max-width: 768px){
@@ -275,9 +272,7 @@ td {
     .info-perfil h1 {
         font-size: 15px; 
     }
-    .img7{
-        content: url('../29640095/CEDULAPequena.jpeg');
-    }
+
 }
 /*pantallas pequeñas, ordenadores portátiles*/
 @media (min-width: 769px) and (max-width: 1024px){
@@ -303,13 +298,8 @@ td {
     .info-perfil h1 {
         font-size: 26px; 
     }
-    .img7{
-        content: url('../29640095/CEDULAGrande.JPEG');
-    }
+
 }
 /*pantallas grandes, ordenadores de escritorio*/
 @media (min-width: 1025px) and (max-width: 1200px){
-    .imagen-perfil {
-        content: url('../29640095/CEDULAGrande.JPEG');
-    }
 }

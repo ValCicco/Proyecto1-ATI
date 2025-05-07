@@ -6,40 +6,42 @@
     <link rel="icon" href="http://www.ciens.ucv.ve/portalasig2/favicon.ico">
     <title></title>
     <link rel="stylesheet" href="css/style.css"> 
+    <script src="js/configLoader.js" defer></script>
     <script src="js/perfil.js" defer></script>
+    
 </head>
 <body>
     <div  class="perfil">
-        <img alt="Foto de perfil" class="imagen-perfil">
+        <img alt="Foto de perfil" class="imagen-perfil" id="imagen-perfil">
         <div class="info-perfil">
-            <h1></h1>
-            <p class="descripcion-info"></p>
+            <h1 id="nombre"></h1>
+            <p class="descripcion-info" id="descripcion"></p>
             <table>
                 <tr>
-                    <td>Mi color favorito es:</td>
-                    <td></td>
+                    <td id="color-query">Mi color favorito es:</td>
+                    <td id="color"></td>
                 </tr>
                 <tr>
-                    <td>Mi libro favorito es:</td>
-                    <td></td>
+                    <td id="libro-query">Mi libro favorito es:</td>
+                    <td id="libro"></td>
                 </tr>
                 <tr>
-                    <td>Estilo de música preferida es:</td>
-                    <td></td>
+                    <td id="musica-query">Estilo de música preferida es:</td>
+                    <td id="musica"></td>
                 </tr>
                 <tr>
-                    <td>Mis Video juegos favoritos son:</td>
-                    <td></td>
+                    <td id="videojuego-query">Mis Video juegos favoritos son:</td>
+                    <td id="videojuego"></td>
                 </tr>
                 <tr>
-                    <td><strong>Lenguajes aprendidos:</strong></td>
-                    <td><strong></strong></td>
+                    <td id="lenguaje-query"><strong>Lenguajes aprendidos:</strong></td>
+                    <td id="lenguaje"></td>
                 </tr>
             </table>
             <div class="contacto">
-                <p>
+                <p id="contacto-query">
                     Si necesitan comunicarse conmigo me pueden escribir a:
-                    <a href=""></a>
+                    <a href="" id="link-email"></a>
                 </p>
             </div>
         </div>

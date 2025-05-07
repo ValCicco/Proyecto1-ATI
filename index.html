@@ -4,24 +4,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="http://www.ciens.ucv.ve/portalasig2/favicon.ico">
-    <title>ATI[UCV] 2024-1</title>
+    <title></title>
     <link rel="stylesheet" href="css/style.css">
-    <script src="conf/configES.json"></script>
     <script src="datos/index.json" defer></script>
+    <script src="js/configLoader.js" defer></script>
     <script src="js/index.js" defer></script>
-
-
 </head>
 <body class="index">
     <header>
         <nav>
             <ul class="menu">
-                <li><h1>ATI<span>[UCV]</span> 2024-1</h1></li>
-                <li class="saludo">Hola, Valeria Ciccolella</li>
+                <li><h1 id="titulo">ATI<span>[UCV]</span> 2024-1</h1></li>
+                <li class="saludo" id="saludo">Hola, <span>Valeria Ciccolella</span></li>
                 <li class="buscar">
                     <form action="" method="get">
-                        <input type="text" name="query" placeholder="Nombre...">
-                        <button type="submit">Buscar</button>
+                        <input type="text" name="query" id="buscar-input" placeholder="Nombre...">
+                        <button type="submit" id="buscar-boton">Buscar</button>
                     </form>
                 </li>
             </ul>
@@ -31,7 +29,7 @@
         <ul class="menu-dummies"></ul>
     </section>
     <footer>
-        <p>Copyright © 2024 Escuela de computación -
+        <p id="copyright">Copyright © 2024 Escuela de computación -
             ATI. Todos los derechos reservados</p>
     </footer>
 </body>

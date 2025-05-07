@@ -6,7 +6,7 @@ window.onload = function() {
         li.classList.add('dummies');
 
         const link = document.createElement("a");
-        link.href = `perfil.html?ci=${perfil.ci}`;
+        link.href = `perfil.html?ci=${perfil.ci}&lang=es`;
 
         const img = document.createElement('img');
         img.setAttribute('srcset', `${perfil.ci}/CEDULAPequena.jpeg 200w, ${perfil.imagen} 720w`);
@@ -22,3 +22,14 @@ window.onload = function() {
         listado.appendChild(li);
     });
 };
+
+function aplicarIdioma(config) {
+    document.title = config.sitio.join(" ");
+    document.getElementById("copyright").textContent = config.copyRight;
+    document.getElementById("buscar-input").placeholder = config.nombre + "...";
+    document.getElementById("titulo").innerHTML = `${config.sitio[0]} <span>${config.sitio[1]}</span> ${config.sitio[2]}`;
+    document.getElementById("buscar-boton").textContent = config.buscar;
+    let saludoElement = document.getElementById("saludo");
+    let textoAntesDelSpan = saludoElement.firstChild.textContent;
+    saludoElement.firstChild.textContent = config.saludo + ", "; 
+}

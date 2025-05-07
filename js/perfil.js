@@ -16,20 +16,21 @@ window.onload = function () {
         }
 
         document.title = perfil.nombre;
-        document.querySelector('.imagen-perfil').src = `${ci}/${perfil.imagen}`;
-        document.querySelector('h1').textContent = perfil.nombre;
-        document.querySelector('.descripcion-info').textContent = perfil.descripcion;
+        document.getElementById("imagen-perfil").src = `${ci}/${perfil.imagen}`;
+        document.getElementById("nombre").textContent = perfil.nombre;
+        document.getElementById("descripcion").textContent = perfil.descripcion;
+        document.getElementById("color").textContent = perfil.color;
+        document.getElementById("libro").textContent = perfil.libro;
+        document.getElementById("musica").textContent = perfil.musica;
+        document.getElementById("videojuego").textContent = perfil.video_juego;
+        document.getElementById("lenguaje").innerHTML = perfil.lenguajes.map(l => `<strong>${l}</strong>`).join(', ');
         
-        const filas = document.querySelectorAll("table tr td:nth-child(2)");
-        filas[0].textContent = perfil.color;
-        filas[1].textContent = perfil.libro;
-        filas[2].textContent = perfil.musica;
-        filas[3].textContent = perfil.video_juego;
-        filas[4].innerHTML = perfil.lenguajes.join(", ");
-
-        const emailLink = document.querySelector('.contacto a');
+        const emailLink = document.getElementById("link-email");
         emailLink.href = `mailto:${perfil.email}`;
         emailLink.textContent = perfil.email;
+
+        // Llamamos a aplicarIdioma y le pasamos tanto config como perfil
+        aplicarIdioma(config, perfil);
     };
 
     script.onerror = function () {
@@ -38,3 +39,15 @@ window.onload = function () {
 
     document.body.appendChild(script);
 };
+
+function aplicarIdioma(config) {
+    document.getElementById("color-query").textContent = config.color;
+    document.getElementById("libro-query").textContent = config.libro;
+    document.getElementById("musica-query").textContent = config.musica;
+    document.getElementById("videojuego-query").textContent = config.video_juego;
+    document.getElementById("lenguaje-query").innerHTML = `<strong>${config.lenguajes}</strong>`;
+    const emailText = config.email.replace("[email]", `<a href="mailto:${perfil.email}">${perfil.email}</a>`);
+    document.getElementById("contacto-query").innerHTML = emailText;
+}
+
+
