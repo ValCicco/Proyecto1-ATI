@@ -7,18 +7,12 @@
     padding: 0;
     gap: 2px;
 }
-.descripcion-info{
+.contacto p, .descripcion-info{
     margin: 0;  
     padding: 8px;
     text-align: justify;
     font-family: 'Courier New', Courier, monospace;
     font-style: italic;
-    font-size: 1rem;
-}
-.contacto p{
-    margin: 0px;  
-    padding: 8px;
-    text-align: justify;
     font-size: 1rem;
 }
 .imagen-perfil {
@@ -126,7 +120,4 @@ td {
         font-size: 26px; 
     }
 
-}
-/*pantallas grandes, ordenadores de escritorio*/
-@media (min-width: 1025px) and (max-width: 1200px){
 }
