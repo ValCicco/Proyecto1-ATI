@@ -1,0 +1,132 @@
+.perfil {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    flex-wrap: nowrap;
+    margin: 4px;
+    padding: 0;
+    gap: 2px;
+}
+.descripcion-info{
+    margin: 0;  
+    padding: 8px;
+    text-align: justify;
+    font-family: 'Courier New', Courier, monospace;
+    font-style: italic;
+    font-size: 1rem;
+}
+.contacto p{
+    margin: 0px;  
+    padding: 8px;
+    text-align: justify;
+    font-size: 1rem;
+}
+.imagen-perfil {
+    object-fit: cover;
+    border-top-left-radius: 30%;
+    height: 355px;
+    width: 200px;
+}
+.info-perfil {
+    padding: 5px;
+    box-shadow: 5px 5px 0px rgba(105, 105, 105, 0.8);
+    border: 2px solid black; 
+    width: 700px; 
+    height: 341px; 
+}
+.info-perfil h1 {
+    color: orange; 
+    font-size: 2rem;
+}
+td {
+    padding-right: 30px; 
+}
+.contacto a{
+    color: orange;
+    text-decoration: none;
+}
+.contacto a:visited {
+    color:red;
+}
+
+/*media queries*/
+/*Dispositivos móviles*/
+@media (max-width: 480px){
+    .perfil{
+        font-size: 16px; 
+        height: 100%;
+    }
+    .imagen-perfil {
+        content: url('../29640095/CEDULAPequena.jpeg');
+        width: 100px; 
+        height: 100%;  
+        max-width: 30vw;  
+    }
+    .info-perfil {
+        width: 70vw; 
+        height: 100%;
+        padding: 1px;
+    }
+    .descripcion-info, .contacto p, td {
+        padding: 2px;
+        font-size: 6px; 
+    }
+    .info-perfil h1 {
+        font-size: 12px; 
+    }
+}
+/*iPads, tablets*/
+@media (min-width: 481px) and (max-width: 768px){
+    .perfil{
+        font-size: 16px; 
+        height: 100%;
+    }
+    .imagen-perfil {
+        content: url('../29640095/CEDULAPequena.jpeg');
+        width: 120px; 
+        height: 100%;  
+        max-width: 30vw;  
+    }
+    .info-perfil {
+        width: 70vw; 
+        height: 100%;
+        padding: 1px;
+    }
+    .descripcion-info, .contacto p, td {
+        padding: 2px;
+        font-size: 9px; 
+    }
+    .info-perfil h1 {
+        font-size: 15px; 
+    }
+
+}
+/*pantallas pequeñas, ordenadores portátiles*/
+@media (min-width: 769px) and (max-width: 1024px){
+    .imagen-perfil {
+        content: url('../29640095/CEDULAGrande.JPEG');
+        width: 200px; 
+        height: 100%;  
+        max-width: 30vw; 
+    }
+    .perfil{
+        font-size: 16px; 
+        height: 100%;
+    }
+    .info-perfil {
+        width: 70vw; 
+        height: 100%;
+        padding: 1px;
+    }
+    .descripcion-info, .contacto p, td {
+        padding: 2px;
+        font-size: 16px; 
+    }
+    .info-perfil h1 {
+        font-size: 26px; 
+    }
+
+}
+/*pantallas grandes, ordenadores de escritorio*/
+@media (min-width: 1025px) and (max-width: 1200px){
+}
