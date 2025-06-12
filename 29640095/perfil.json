@@ -1,4 +1,4 @@
-const perfil = {
+{
 	"nombre": "Valeria Ciccolella",
     "descripcion": "Soy estudiante de 6to semestre de la carrera Licenciatura en Computación en la Universidad Central de Venezuela. Actualmente, me desempeño como preparadora en el Departamento de Matemática, un rol que disfruto porque me encantan las matemáticas. Además, soy amante de la lectura, y siempre estoy buscando aprender algo nuevo que me inspire a crecer tanto a nivel académico como personal.",
 	"color": "Morado",

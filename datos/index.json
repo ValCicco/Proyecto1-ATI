@@ -1,4 +1,4 @@
-const perfiles = [
+[
     {
         "ci": "29640095",
         "imagen": "29640095\/CEDULAGrande.JPEG",
